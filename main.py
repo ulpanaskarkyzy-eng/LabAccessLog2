@@ -1,16 +1,13 @@
-from task9 import LabAccessLog2 as Task9
-from task10 import LabAccessLog2 as Task10
-from task11 import LabAccessLog2 as Task11
+from hours_array import HoursArray
+from hour_counter import HourCounter
+from day_filter import DayFilter
 
+t9 = HoursArray("lab_log.csv")
+print("HoursArray:", t9.get_hours())
 
-t9 = Task9("lab_log.csv")
-print("Задание 9:", t9.get_hours())
+t10 = HourCounter("lab_log.csv")
+print("HourCounter:", t10.count_by_hour())
 
-
-t10 = Task10("lab_log.csv")
-print("Задание 10:", t10.count_by_hour())
-
-
-t11 = Task11("lab_log.csv")
-print("Задание 11:")
+t11 = DayFilter("lab_log.csv")
+print("DayFilter:")
 print(t11.get_day("2024-03-15"))

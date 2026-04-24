@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 
 
-class LabAccessLog2:
+class HoursArray:
     def __init__(self, filepath):
         self.filepath = filepath
 
+    # читаем файл и вытаскиваем часы через срез строки
     def get_hours(self):
         df = pd.read_csv(self.filepath)
         hours = []
@@ -15,6 +16,5 @@ class LabAccessLog2:
         return np.array(hours)
 
 
-obj = LabAccessLog2("lab_log.csv")
-hours = obj.get_hours()
-print("Массив часов:", hours)
+obj = HoursArray("lab_log.csv")
+print("HoursArray:", obj.get_hours())

@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-class LabAccessLog2:
+class HourCounter:
     def __init__(self, filepath):
         self.filepath = filepath
 
@@ -13,12 +13,12 @@ class LabAccessLog2:
             hours.append(int(ts[11:13]))
         return np.array(hours)
 
+    # считаем сколько входов в каждом из 24 часов
     def count_by_hour(self):
         hours = self.get_hours()
         counts = np.bincount(hours, minlength=24)
         return counts
 
 
-obj = LabAccessLog2("lab_log.csv")
-counts = obj.count_by_hour()
-print("Входов по часам (0-23):", counts)
+obj = HourCounter("lab_log.csv")
+print("HourCounter:", obj.count_by_hour())

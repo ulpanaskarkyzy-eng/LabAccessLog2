@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-class LabAccessLog2:
+class DayFilter:
     def __init__(self, filepath):
         self.filepath = filepath
 
@@ -9,11 +9,13 @@ class LabAccessLog2:
         df = pd.read_csv(self.filepath)
 
         df["hour"] = df["ts"].apply(lambda ts: int(ts[11:13]))
+
         df = df[["ts", "hour", "student_id"]]
+
         day_df = df[df["ts"].str.startswith(date_str)]
         return day_df
 
 
-obj = (LabAccessLog2("lab_log.csv"))
-result = obj.get_day("2024-03-15")
-print(result)
+obj = DayFilter("lab_log.csv")
+print("DayFilter:")
+print(obj.get_day("2024-03-15"))
