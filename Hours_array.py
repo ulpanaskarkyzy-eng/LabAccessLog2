@@ -16,5 +16,5 @@ class HoursArray:
         return np.array(hours)
 
 
-obj = HoursArray("lab_log.csv")
+obj = HoursArray("Lab_log.csv")
 print("HoursArray:", obj.get_hours())

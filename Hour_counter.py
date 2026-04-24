@@ -20,5 +20,5 @@ class HourCounter:
         return counts
 
 
-obj = HourCounter("lab_log.csv")
+obj = HourCounter("Lab_log.csv")
 print("HourCounter:", obj.count_by_hour())
