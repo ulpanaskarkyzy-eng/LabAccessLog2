@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from task9 import LabAccessLog2 as Task9
+from task10 import LabAccessLog2 as Task10
+from task11 import LabAccessLog2 as Task11
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+t9 = Task9("lab_log.csv")
+print("Задание 9:", t9.get_hours())
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+t10 = Task10("lab_log.csv")
+print("Задание 10:", t10.count_by_hour())
+
+
+t11 = Task11("lab_log.csv")
+print("Задание 11:")
+print(t11.get_day("2024-03-15"))
