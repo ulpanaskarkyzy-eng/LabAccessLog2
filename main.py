@@ -12,10 +12,13 @@ print("HourCounter:", t10.count_by_hour())
 
 t11 = DayFilter("Lab_log.csv")
 print("DayFilter:")
-print(t11.get_day("2024-03-15"))
+print(t11.get_day("2026-03-15"))
 
 t12 = EntriesSaver("Lab_log.csv")
-t12.save_by_hour("2024-03-15")
+t12.save_by_hour("2026-03-15")
 
 t13 = HourPlotter("Lab_log.csv")
-t13.plot("2024-03-15")
+t13.plot("2026-03-15")
+
+# задание 14 запускается отдельно через Lab_api.py
+# после запуска открой браузер: http://127.0.0.1:5000/entries?date=2026-03-15

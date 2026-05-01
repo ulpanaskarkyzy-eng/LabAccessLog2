@@ -13,7 +13,6 @@ class HourCounter:
             hours.append(int(ts[11:13]))
         return np.array(hours)
 
-    # считаем сколько входов в каждом из 24 часов
     def count_by_hour(self):
         hours = self.get_hours()
         counts = np.bincount(hours, minlength=24)

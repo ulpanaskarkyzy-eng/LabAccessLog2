@@ -21,4 +21,4 @@ class EntriesSaver:
 
 
 obj = EntriesSaver("Lab_log.csv")
-obj.save_by_hour("2024-03-15")
+obj.save_by_hour("2026-03-15")

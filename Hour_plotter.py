@@ -29,4 +29,4 @@ class HourPlotter:
 
 
 obj = HourPlotter("Lab_log.csv")
-obj.plot("2024-03-15")
+obj.plot("2026-03-15")
