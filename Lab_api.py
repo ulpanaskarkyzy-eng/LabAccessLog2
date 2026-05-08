@@ -14,7 +14,6 @@ class LabApi:
         df = df[["ts", "hour", "student_id"]]
         return df[df["ts"].str.startswith(date_str)]
 
-    # обработчик запроса: GET /entries?date=2026-03-15
     def entries(self):
         date_str = request.args.get("date", "")
         if not date_str:
@@ -29,4 +28,3 @@ class LabApi:
 
 obj = LabApi("Lab_log.csv")
 obj.run()
-# после запуска открой браузер: http://127.0.0.1:5000/entries?date=2026-03-15

@@ -8,7 +8,6 @@ class EntriesSaver:
     def get_day(self, date_str):
         df = pd.read_csv(self.filepath)
         df["hour"] = df["ts"].apply(lambda ts: int(ts[11:13]))
-        df = df[["ts", "hour", "student_id"]]
         return df[df["ts"].str.startswith(date_str)]
 
     def save_by_hour(self, date_str):

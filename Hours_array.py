@@ -6,7 +6,6 @@ class HoursArray:
     def __init__(self, filepath):
         self.filepath = filepath
 
-    # читаем файл и вытаскиваем часы через срез строки
     def get_hours(self):
         df = pd.read_csv(self.filepath)
         hours = []

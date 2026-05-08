@@ -22,7 +22,6 @@ class HourPlotter:
         plt.ylabel("Число входов")
         plt.title(f"Входы в лабораторию за {date_str}")
         plt.xticks(range(0, 24))
-        plt.tight_layout()
         plt.savefig("entries_by_hour.png")
         plt.show()
         print("HourPlotter: график сохранён entries_by_hour.png")

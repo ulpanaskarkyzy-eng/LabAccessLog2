@@ -18,4 +18,4 @@ class DayFilter:
 
 obj = DayFilter("Lab_log.csv")
 print("DayFilter:")
-print(obj.get_day("2026-03-15"))
+print(obj.get_day("2026-03-16"))
